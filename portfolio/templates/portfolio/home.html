@@ -1,0 +1,43 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block content %}
+    
+    
+<div class="box1">
+    <h1>Hi, I'm Pushkar</h1>
+    <img id="cornres" src="{% static 'portfolio/myImage.jpg' %}" alt="imagee of pushkar">
+    <p>My name is Pushkar Brijnandan Mahto and i am a Web developer and it's the thrill of handling the request that the user want, I live in Latur</p>
+</div>
+
+
+
+<!-- <div class="pushkar">
+    
+</div> -->
+
+
+<div class="portfoli">
+    {% for cont in context %}
+
+    
+        <div class="box">
+            
+            <img src="{{cont.image.url}}" alt="image of roar bike website hoempage" width="308" height="250">
+            <h1>{{cont.title}}</h1>
+            <p>{{cont.description}}</p>
+            {% if cont.url %}
+            <h3><a href="{{cont.url}}">Link</a></h3>
+            {% endif %}
+
+        </div>
+    
+    
+    {% endfor %}
+
+</div>
+
+
+
+
+{% endblock %}

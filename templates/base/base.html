@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'logo/logo.png' %}">
+    
+    <title>pushkar.live</title>
+</head>
+<body>
+    
+
+        
+            
+            
+            <header>
+                <nav>
+                    <a href="{% url 'home' %}" class="mybutton">Home</a>
+                    <a href="{% url 'blog:all_blogs' %}" class="mybutton">Blog</a>
+                    <a href="https://twitter.com/home" target="_blank" class="mybutton">Twitter</a>
+                    <a href="{% url 'portfolio:contact' %}" class="mybutton">Contact</a>
+                    <a href="{% url 'portfolio:servicess' %}" class="mybutton">Skills</a>
+                </nav>
+            </header>
+       
+    
+    
+
+    <!-- <div class="logo"> 
+        <span class="highlight" >Pushkar Brijnandan Mahto - Web Developer </span>
+    </div> -->
+
+   
+
+    <div class="container">
+
+        
+
+        
+
+      
+
+        <main>
+            {% block content %}
+    
+            {% endblock %}
+        </main>
+
+        
+
+    </div>
+
+    <footer>
+        
+        <div class="herobox1">
+            <img src="{% static 'logo/outline_copyright.png' %}" alt="copyright image">
+            
+        </div>
+        <div class="herobox2">
+            <h2>Pushkar Mahto 2021</h2>
+        </div>
+    </footer>
+
+</body>
+</html>

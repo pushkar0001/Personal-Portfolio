@@ -1,0 +1,24 @@
+{% extends "base/base.html" %}
+
+
+{% block content %}
+
+
+
+    <div class="blog">
+        <h1 class="box2">Blog</h1>
+        <h2 class="box3">Pushkar has written {{ context.count }} blog{{ context.count|pluralize }}</h2>
+        
+        
+        {% for cont in context %}
+        <a href="{% url 'blog:detail' cont.id %}">
+            <h1>{{cont.title}}</h1>
+        </a>
+        <h4>{{cont.date|date:'d M Y'}}</h4>
+        <p>{{cont.description|striptags|truncatechars:100}}</p>
+        {% endfor %}
+        
+    </div>
+
+
+    {% endblock %}
