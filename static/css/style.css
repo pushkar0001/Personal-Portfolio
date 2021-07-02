@@ -149,16 +149,54 @@ footer {
 
 
 /* Mobile View */
-@media(max-width: 500px){
+@media(max-width: 400px){
+
+    body{
+        width: 100%;
+    }
     .box {
         width: 100%;
+        
+        margin-left:  auto;
+        margin-right: auto;
         
     }
 
     .box1{
         width: 100%;
+        margin-top: 250px;
         
     }
+
+    header {
+        margin-bottom:50px;
+    }
+
+    .header-container{
+       
+        position: relative;
+        
+    }
+
+    .container {
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+
+    .mybutton {
+        display: block;
+        margin:10px 0;
+        
+    }
+
+    footer{
+        width: 100%;
+    }
+
+    
 }
 
 .blog {
